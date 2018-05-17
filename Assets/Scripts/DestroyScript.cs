@@ -2,19 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollisionScript : MonoBehaviour
-{
+public class DestroyScript : MonoBehaviour {
 
     void OnCollisionEnter(Collision other)
     {
 
         // Destroy everything that leaves the trigger
-        if (other.gameObject.tag == "Obstacle")
+        if (other.gameObject.tag == "Player")
         {
-            Destroy(this.gameObject);
+            Destroy(other.gameObject);
 
         }
-    
-
     }
 }

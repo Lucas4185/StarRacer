@@ -24,20 +24,11 @@ public class SpawnScript : MonoBehaviour {
 
 
     }
-    void OnCollisionEnter(Collision other)
-    {
-
-        // Destroy everything that leaves the trigger
-        if (other.gameObject.tag == "Player")
-        {
-            Destroy(other.gameObject);
-
-        }
-    }
+   
 
         private void SpawnCube()
     {
-        Vector3 spawnPosition = new Vector3(Random.Range(-7.0f, 7.0f), 200);
+        Vector3 spawnPosition = new Vector3(Random.Range(-7.0f, 7.0f), 200, -3);
         Instantiate(cubePrefab, spawnPosition, Quaternion.identity);
         spawnTimer = -3;
 
